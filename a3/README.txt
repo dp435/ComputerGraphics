@@ -1,0 +1,1 @@
+Program that creates 2-D raster images of 3-D scenes by using a graphics pipeline that takes advantage of specialized hardware and linear algebra to create images quickly.

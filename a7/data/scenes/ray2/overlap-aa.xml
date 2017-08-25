@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--  Overlapping geometry.
+ -->
+<scene>
+  <samples>8</samples>
+  <exposure>70</exposure>
+  <camera type="ParallelCamera">
+    <viewPoint>30 30 30</viewPoint>
+    <viewDir>-1 -1 -1</viewDir>
+    <viewUp>0 0 1</viewUp>
+    <viewWidth>11</viewWidth>
+    <viewHeight>11</viewHeight>
+  </camera>
+  <image>
+    1024 1024
+  </image>
+  <shader name="gray" type="Phong">
+    <diffuseColor>0.5 0.5 0.5</diffuseColor>
+    <specularColor>1 1 1</specularColor>
+    <exponent>20</exponent>
+  </shader>
+  <shader name="glazed" type="Glazed">
+    <refractiveIndex>1.5</refractiveIndex>
+    <substrate type="Phong">
+      <diffuseColor>0.5 0.5 0.5</diffuseColor>
+      <specularColor>1 1 1</specularColor>
+      <exponent>20</exponent>
+    </substrate>
+  </shader>
+
+  <surface type="Sphere">
+    <shader ref="glazed" />
+    <center>0 0 -30</center>
+    <radius>30</radius>
+  </surface>
+
+  <surface type="Group">
+    <translate>0 0 2.5</translate>
+    <rotate>-45 0 0</rotate>
+    <surface type="Cylinder">
+      <shader ref="gray" />
+      <center>0 0 0</center>
+      <radius>1</radius>
+      <height>5</height>
+    </surface>
+    <surface type="Group">
+    <translate>0 0 2.5</translate>
+    <surface type="Box">
+      <shader ref="gray" />
+      <minPt>-1 -1 -1</minPt>
+      <maxPt>1 1 1</maxPt>
+    </surface>
+    <surface type="Group">
+      <rotate>45 0 0</rotate>
+      <surface type="Box">
+        <shader ref="gray" />
+        <minPt>-1 -1 -1</minPt>
+        <maxPt>1 1 1</maxPt>
+      </surface>
+    </surface>
+    <surface type="Group">
+      <rotate>0 45 0</rotate>
+      <surface type="Box">
+        <shader ref="gray" />
+        <minPt>-1 -1 -1</minPt>
+        <maxPt>1 1 1</maxPt>
+      </surface>
+    </surface>
+    <surface type="Group">
+      <rotate>0 0 45</rotate>
+      <surface type="Box">
+        <shader ref="gray" />
+        <minPt>-1 -1 -1</minPt>
+        <maxPt>1 1 1</maxPt>
+      </surface>
+    </surface>
+  </surface>
+  </surface>
+
+  <surface type="Group">
+    <translate>0 0 2.5</translate>
+    <rotate>0 45 0</rotate>
+    <surface type="Cylinder">
+      <shader ref="gray" />
+      <center>0 0 0</center>
+      <radius>1</radius>
+      <height>5</height>
+    </surface>
+    <surface type="Group">
+    <translate>0 0 2.5</translate>
+    <surface type="Box">
+      <shader ref="gray" />
+      <minPt>-1 -1 -1</minPt>
+      <maxPt>1 1 1</maxPt>
+    </surface>
+    <surface type="Group">
+      <rotate>45 0 0</rotate>
+      <surface type="Box">
+        <shader ref="gray" />
+        <minPt>-1 -1 -1</minPt>
+        <maxPt>1 1 1</maxPt>
+      </surface>
+    </surface>
+    <surface type="Group">
+      <rotate>0 45 0</rotate>
+      <surface type="Box">
+        <shader ref="gray" />
+        <minPt>-1 -1 -1</minPt>
+        <maxPt>1 1 1</maxPt>
+      </surface>
+    </surface>
+    <surface type="Group">
+      <rotate>0 0 45</rotate>
+      <surface type="Box">
+        <shader ref="gray" />
+        <minPt>-1 -1 -1</minPt>
+        <maxPt>1 1 1</maxPt>
+      </surface>
+    </surface>
+  </surface>
+  </surface>
+
+  <light type="PointLight">
+    <position>100 100 100</position>
+    <intensity>90 90 90</intensity>
+  </light>
+
+  <light type="PointLight">
+    <position>100 0 0</position>
+    <intensity>100 0 0</intensity>
+  </light>
+
+  <light type="PointLight">
+    <position>0 100 0</position>
+    <intensity>0 100 0</intensity>
+  </light>
+
+  <light type="PointLight">
+    <position>0 0 100</position>
+    <intensity>0 0 100</intensity>
+  </light>
+</scene>
+

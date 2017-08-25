@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--  Test scene with a single sphere 
+      RGB encoding of XYZ components of the surface normals
+ -->
+<scene>
+  <camera type="PerspectiveCamera">
+    <viewPoint>5 4 3</viewPoint>
+    <viewDir>-5 -4 -3</viewDir>
+    <viewUp>0 1 0</viewUp>
+    <projDistance>5</projDistance>
+    <viewWidth>2.5</viewWidth>
+    <viewHeight>2.5</viewHeight>
+  </camera>
+  <image>
+    300 300
+  </image>
+  <shader name="xyz2rgb" type="RGBNormals"></shader>
+  <surface type="Sphere">
+    <shader ref="xyz2rgb" />
+    <!--shader type="ShowNormal"/-->
+    <center>0 0 0</center>
+    <radius>1</radius>
+  </surface>
+  <light>
+    <position>3 4 5</position>
+    <intensity>1 1 1</intensity>
+  </light>
+</scene>

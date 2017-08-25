@@ -1,0 +1,1 @@
+A simplified version of a ray tracer.

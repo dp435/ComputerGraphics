@@ -1,2 +1,2 @@
-# ComputerGraphics
-Introduction to Computer Graphics
+# Computer Graphics Projects
+Past projects completed for Introduction to Computer Graphics course.

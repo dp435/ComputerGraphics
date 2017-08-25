@@ -1,0 +1,2 @@
+A simple mesh generation and processing utility that is capable of building triangle meshes to approximate some simple curved surfaces, such as spheres, cylinders and toruses.
+It reads and writes meshes stored in the popular OBJ file format, a text format with one line for each vertex and face in the mesh. 
